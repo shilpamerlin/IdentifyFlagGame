@@ -42,19 +42,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNx-e2-mhW">
-                                <rect key="frame" x="335.5" y="108" width="63.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZNx-e2-mhW" secondAttribute="trailing" constant="15" id="3QN-9t-e9O"/>
                             <constraint firstItem="T78-sU-TjH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NCV-jd-B6e"/>
-                            <constraint firstItem="ZNx-e2-mhW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="P0S-AE-Cyr"/>
                             <constraint firstItem="T78-sU-TjH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aer-Mz-Z3u"/>
                         </constraints>
                     </view>
@@ -63,7 +55,6 @@
                         <outlet property="button1" destination="28M-Bd-6yf" id="oeV-DV-j7J"/>
                         <outlet property="button2" destination="Sph-q7-Uah" id="vrH-Iq-ZY5"/>
                         <outlet property="button3" destination="H4n-5o-Cf4" id="prt-IN-Vru"/>
-                        <outlet property="scoreLbl" destination="ZNx-e2-mhW" id="rmx-OP-aC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var scoreLbl: UILabel!
     
     var countries = [String]()
     var correctAnswer = 0
@@ -32,7 +31,8 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetGame))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetGame))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScores))
      
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         askQuestion()
@@ -40,7 +40,11 @@ class ViewController: UIViewController {
     
     @objc func resetGame(){
         score = 0
-        scoreLbl.text = String(score)
+    }
+    @objc func showScores(){
+        let ac = UIAlertController(title: "Score", message: "Your current score is \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: .none))
+        present(ac,animated: true)
     }
     
     func askQuestion(action: UIAlertAction! = nil){
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
             score -= 1
         }
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        scoreLbl.text = "Score: \(String(score))"
+        //scoreLbl.text = "Score: \(String(score))"
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
     }
